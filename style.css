@@ -1,0 +1,11 @@
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+img {
+    position: absolute;
+    width: auto;
+    height: 35px;
+    left: 40px;
+    top: 30px;
+}
