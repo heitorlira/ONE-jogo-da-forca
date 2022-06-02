@@ -4,6 +4,7 @@
    3. validação: ganhou? <=> perdeu?
    4. FIXME: eixo, desenharTracinho(), escreverLetraCorreta(); <-- Mudar o nome das funções e variáveis
 */
+
 //#region --- Variáveis
 var palavras = ['ALURA', 'ORACLE', 'HTML', 'CSS', 'JAVASCRIPT']; // Array de palavras a serem sorteadas #TODO: adicionar mais
 var palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)]; // Sorteia uma palavra e arredonda
@@ -13,7 +14,40 @@ var letrasErradas = []; // -> Array de letras erradas & não podem ser repetidas
 var letrasCorretas = []; // -> faz parte da palavra secreta
 
 var canvas = document.querySelector('#canvas').getContext('2d'); // -> tabuleiro do jogo | Onde será desenhado
-//#endregion --- Variáveis
+
+// FIXME: Apagar LOG
+console.log(palavraSecreta);
+
+document.addEventListener('keydown', (evento) => {
+    var codigoLetra = evento.keyCode; // evento.keyCode -> pega o código da tecla pressionada
+    if (eUmaLetra(codigoLetra)) {
+        var letra = evento.key.toUpperCase(); // evento.key -> pega a letra da tecla pressionada (não o código)
+
+        // Essa letra é repetida? Sim -> mostrarAvisoLetraRepetida()
+        if (letrasErradas.includes(letra)) {
+            mostrarAvisoLetraRepetida(); // Evitar que a mesma letra seja usada mais de uma vez
+        } else {
+            // A letra tá na palavra secreta?
+            if (palavraSecreta.includes(letra)) {
+                letrasCorretas.push(letra); // Sim -> adiciona letra na array de letras corretas
+            } else {
+                letrasErradas.push(letra); // Não -> adiciona letra na array de letras erradas
+            }
+        }
+
+        // Atualizar o jogo / canvas
+    }
+
+    //FIXME: Apagar LOGs
+    console.log('Letra inserida: ' + letra);
+    console.log('Erradas ->' + letrasErradas);
+    console.log('Corretas ->' + letrasCorretas);
+});
+
+
+desenharTracinho(palavraSecreta); // Desenha o tracinho na tela(canvas)
+
+
 
 //#region --- Funções
 function desenharTracinho() {
@@ -33,6 +67,15 @@ function desenharTracinho() {
     canvas.closePath(); // Finaliza o desenho
 }
 
+function eUmaLetra(intervalo) {
+    // A=65 <-> Z=90
+    return intervalo >= 65 && intervalo <= 90;
+}
+
+function mostrarAvisoLetraRepetida() {
+    alert('Letra já foi usada!');
+}
+
 function escreverLetraCorreta(indice) {
     canvas.font = 'bold 52px Inter'; // Tipo da fonte usada (importada no HTML)
     canvas.lineWidth = 6; // Espessura(densidade, grossura) da linha
@@ -49,11 +92,5 @@ function escreverLetraCorreta(indice) {
 
 //! function pegandoTeclado() {}
 
+
 //#endregion --- Funções
-
-
-desenharTracinho(palavraSecreta); // Desenha o tracinho na tela(canvas)
-
-
-//#region LOGs TODO: remover
-console.log(palavraSecreta);
