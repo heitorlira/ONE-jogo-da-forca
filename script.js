@@ -30,22 +30,22 @@ document.addEventListener('keydown', (evento) => {
         } else {
             // A letra tá na palavra secreta?
             if (palavraSecreta.includes(letra)) {
-                 // Sim -> adiciona letra na array de letras corretas
-                escreverLetraCorreta(palavraSecreta.indexOf(letra)); // Desenha a letra na posição correta
+                // Sim -> localiza e posiciona a letra na tela                
+                desenharLetraCorreta(palavraSecreta.indexOf(letra)); // Localiza a posição da letra na palavra secreta
                 for (let i = 0; i < palavraSecreta.length; i++) {
                     if (palavraSecreta[i] === letra) {
-                        escreverLetraCorreta(i); // Desenha a letra na posição correta
-                        letrasCorretas.push(letra);
+                        desenharLetraCorreta(i); // Desenha a letra
+                        letrasCorretas.push(letra); // Adiciona a letra na array de letras corretas a cada loop
                     }
                 }
-                // Condição de vitória
+                // Se todas as letras estiverem corretas -> Ganhou!
                 if (letrasCorretas.length === palavraSecreta.length) {
                     alert('Parabéns! Você ganhou!');
                 }
             } else {
                 letrasErradas.push(letra); // Não -> adiciona letra na array de letras erradas
                 vidas--; // Diminui uma vida
-                // Condição de derrota
+                // Se não houver mais vidas -> Perdeu!
                 if (vidas <= 0) {
                     gameOver(); // Perdeu o jogo
                     // location.reload(); // Recarrega a página
@@ -98,8 +98,7 @@ function gameOver() {
     alert('Game Over!');
 }
 
-// Trocar o nome desse parametro para "letraCorreta?"
-function escreverLetraCorreta(letraCorreta) {
+function desenharLetraCorreta(letraCorreta) {
     canvas.font = 'bold 52px Inter'; // Tipo da fonte usada (importada no HTML)
     canvas.lineWidth = 6; // Espessura(densidade, grossura) da linha
     canvas.lineCap = 'round'; // Ajusta a forma de terminar a linha (cantinhos arredondados)
