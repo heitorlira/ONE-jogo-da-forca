@@ -12,6 +12,7 @@ var palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)]; // S
 var vidas = 5; // Quantidade de vidas restantes antes de perder o jogo
 var letrasErradas = []; // -> Array de letras erradas & não podem ser repetidas
 var letrasCorretas = []; // -> faz parte da palavra secreta
+var menosDois = 2;
 
 var canvas = document.querySelector('#canvas').getContext('2d'); // -> tabuleiro do jogo | Onde será desenhado
 //#endregion ---> Variáveis
@@ -30,7 +31,8 @@ document.addEventListener('keydown', (evento) => {
         } else {
             // A letra tá na palavra secreta?
             if (palavraSecreta.includes(letra)) {
-                // Sim -> localiza e posiciona a letra na tela                
+                // Sim -> localiza e posiciona a letra na tela
+                //? Criar função específica
                 desenharLetraCorreta(palavraSecreta.indexOf(letra)); // Localiza a posição da letra na palavra secreta
                 for (let i = 0; i < palavraSecreta.length; i++) {
                     if (palavraSecreta[i] === letra) {
@@ -38,6 +40,7 @@ document.addEventListener('keydown', (evento) => {
                         letrasCorretas.push(letra); // Adiciona a letra na array de letras corretas a cada loop
                     }
                 }
+                //? Criar função específica
                 // Se todas as letras estiverem corretas -> Ganhou!
                 if (letrasCorretas.length === palavraSecreta.length) {
                     alert('Parabéns! Você ganhou!');
@@ -45,7 +48,7 @@ document.addEventListener('keydown', (evento) => {
             } else {
                 letrasErradas.push(letra); // Não -> adiciona letra na array de letras erradas
                 vidas--; // Diminui uma vida
-                // Se não houver mais vidas -> Perdeu!
+                escreverLetraIncorreta(letra, vidas); // Escreve a letra errada na tela                
                 if (vidas <= 0) {
                     gameOver(); // Perdeu o jogo
                     // location.reload(); // Recarrega a página
@@ -58,9 +61,9 @@ document.addEventListener('keydown', (evento) => {
 
     //FIXME: Apagar LOGs
     console.log('Letra inserida: ' + letra);
-    console.log('Erradas -> ' + letrasErradas);
-    console.log('Corretas -> ' + letrasCorretas);
-    console.log('Vidas -> ' + vidas);
+    console.log('Erradas    -> ' + letrasErradas);
+    console.log('Corretas   -> ' + letrasCorretas);
+    console.log('Vidas      -> ' + vidas);
 });
 
 
@@ -118,7 +121,7 @@ function escreverLetraIncorreta(letraIncorreta, margemDeErro) {
     canvas.lineJoin = 'round'; // Ajusta a forma quando duas linhas se encontram (cantinhos arredondados)
     canvas.strokeStyle = '#0A3871'; // Cor das linhas
 
-    canvas.fillText(palavraSecreta[letraIncorreta], 535 + (40 * (10 - margemDeErro)), 710, 40); // Desenha a letra incorreta abaixo dos tracinhos
+    canvas.fillText(letraIncorreta, 760 + (40 * -margemDeErro), 710, 40); // Desenha a letra incorreta abaixo dos tracinhos
 }
 
 //#endregion ---> Funções
