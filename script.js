@@ -23,6 +23,7 @@ console.log(palavraSecreta);
 
 desenhaTracoLetras(palavraSecreta); // Desenha o tracinho na tela(canvas)
 desenhaForca();
+desenhaBoneco();
 
 document.addEventListener('keydown', (evento) => {
     var codigoLetra = evento.keyCode; // evento.keyCode -> pega o código da tecla pressionada
@@ -70,12 +71,31 @@ function desenhaForca() { // Toda a base da forca está aqui
 }
 
 function desenhaBoneco() {
-    // cabeça
+    desenharTipoDaLinha(5); // Configuração da linha
+    canvas.beginPath(); // Inicia o desenho
+    // Cabeça
+    canvas.arc(700, 180, 30, 0, 2 * Math.PI);
     // corpo
+    canvas.moveTo(700, 210);
+    canvas.lineTo(700, 300);
+    
     // braço esquerdo
+    canvas.moveTo(700, 240);
+    canvas.lineTo(660, 270);
+
     // braço direito
+    canvas.moveTo(700, 240);
+    canvas.lineTo(740, 270);
+
     // perna esquerda
+    canvas.moveTo(700, 300);
+    canvas.lineTo(660, 350);
+
     // perna direita
+    canvas.moveTo(700, 300);
+    canvas.lineTo(740, 350);
+
+    canvas.stroke();
 }
 
 
