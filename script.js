@@ -92,8 +92,8 @@ function desenhaTracoLetras() {
     var localizacao = 600/palavraSecreta.length; // Espaço onde será desenhado o tracinho
     canvas.beginPath(); // Inicia o desenho
     for (let i = 0; i < palavraSecreta.length; i++) {
-        canvas.moveTo(500 + (localizacao * i), 640); // Mover
-        canvas.lineTo(550 + (localizacao * i), 640); // Desenhar
+        canvas.moveTo(300 + (localizacao * i), 540); // Mover
+        canvas.lineTo(350 + (localizacao * i), 540); // Desenhar
     }
     canvas.stroke(); // Borda
     canvas.closePath(); // Finaliza o desenho
@@ -113,7 +113,7 @@ function escreverLetraCorreta(letraCorreta) {
     configuracaoDaLinha(6); // Configuração da linha
 
     var localizacao = 600/palavraSecreta.length; //  Espaço onde será desenhado o tracinho
-    canvas.fillText(palavraSecreta[letraCorreta], 505 + (localizacao * letraCorreta), 620); // Desenha a letra correta acima dos tracinhos
+    canvas.fillText(palavraSecreta[letraCorreta], 308 + (localizacao * letraCorreta), 525); // Desenha a letra correta acima dos tracinhos
     canvas.stroke(); // Borda
 }
 
@@ -122,7 +122,7 @@ function escreverLetraIncorreta(letraIncorreta, margemDeErro) {
     canvas.font = 'bold 40px Inter'; // Tipo da fonte usada (importada no HTML)
     configuracaoDaLinha(6); // Configuração da linha
 
-    canvas.fillText(letraIncorreta, 375 + (40 *(10 - margemDeErro)), 710, 40); // Desenha a letra incorreta abaixo dos tracinhos
+    canvas.fillText(letraIncorreta, 250 + (40 *(10 - margemDeErro)), 610, 40); // Desenha a letra incorreta abaixo dos tracinhos
 }
 
 function desenhaLetraCorreta(letra) { // Melhorando visibilidade
