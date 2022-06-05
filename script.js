@@ -41,30 +41,9 @@ document.addEventListener('keydown', (evento) => { // atualizaJogo();
                     gameWin(); // Se todas as letras estiverem corretas -> Ganhou!
                 } else {
                     letrasErradas.push(letra); // Não -> adiciona letra na array de letras erradas
-                    vidas--; // Decrementa a quantidade de vidas
+                    vidas--; // Diminui a quantidade de vidas
                     escreverLetraIncorreta(letra, vidas); // Escreve a letra errada na tela
-
-                    switch (vidas) {
-                        case 5:
-                            forcaCabeca();
-                            break;
-                        case 4:
-                            forcaCorpo();
-                            break;
-                        case 3:
-                            forcaBracoEsquerdo();
-                            break;
-                        case 2:
-                            forcaBracoDireito();
-                            break;
-                        case 1:
-                            forcaPernaEsquerda();
-                            break;
-                        default:
-                            forcaPernaDireita();
-                            gameOver();
-                            break;
-                    }
+                    forcaBoneco();
                 }
             }
         }
@@ -89,11 +68,11 @@ function configuracaoDaLinha(espessuraDaLinha) { // Configuração da linha | Me
 function desenhaTracoLetras() {
     configuracaoDaLinha(6); // Configuração da linha
     
-    var localizacao = 600/palavraSecreta.length; // Espaço onde será desenhado o tracinho
+    var tamanhoLinha = 600/palavraSecreta.length; // Espaço onde será desenhado o tracinho
     canvas.beginPath(); // Inicia o desenho
     for (let i = 0; i < palavraSecreta.length; i++) {
-        canvas.moveTo(300 + (localizacao * i), 540); // Mover
-        canvas.lineTo(350 + (localizacao * i), 540); // Desenhar
+        canvas.moveTo(300 + (tamanhoLinha * i), 540); // Mover
+        canvas.lineTo(350 + (tamanhoLinha * i), 540); // Desenhar
     }
     canvas.stroke(); // Borda
     canvas.closePath(); // Finaliza o desenho
@@ -112,8 +91,8 @@ function escreverLetraCorreta(letraCorreta) {
     canvas.font = 'bold 52px Inter'; // Tipo da fonte usada (importada no HTML)
     configuracaoDaLinha(6); // Configuração da linha
 
-    var localizacao = 600/palavraSecreta.length; //  Espaço onde será desenhado o tracinho
-    canvas.fillText(palavraSecreta[letraCorreta], 308 + (localizacao * letraCorreta), 525); // Desenha a letra correta acima dos tracinhos
+    var tamanhoLinha = 600/palavraSecreta.length; //  Espaço onde será desenhado o tracinho
+    canvas.fillText(palavraSecreta[letraCorreta], 308 + (tamanhoLinha * letraCorreta), 525); // Desenha a letra correta acima dos tracinhos
     canvas.stroke(); // Borda
 }
 
@@ -167,6 +146,30 @@ function gameOver() {  // Melhorando visibilidade
 }
 
 // Funções para desenhar o corpo na forca
+function forcaBoneco() { // Melhorando visibilidade
+    switch (vidas) {
+        case 5:
+            forcaCabeca();
+            break;
+        case 4:
+            forcaCorpo();
+            break;
+        case 3:
+            forcaBracoEsquerdo();
+            break;
+        case 2:
+            forcaBracoDireito();
+            break;
+        case 1:
+            forcaPernaEsquerda();
+            break;
+        default:
+            forcaPernaDireita();
+            gameOver();
+            break;
+    }
+}
+
 function forcaCabeca() {
     canvas.beginPath();
     canvas.arc(650, 180, 30, 0, 2 * Math.PI);
