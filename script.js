@@ -1,8 +1,9 @@
 /* TODO:
-   1. lógica
-   1.1 Desenhando a forca
-!  2. feedback visual
-   3. validação: ganhou? <=> perdeu?
+   1. lógica                            OK
+   1.1 Desenhando a forca               OK
+!  2. feedback visual                   ?
+   3. validação: ganhou? <=> perdeu?    OK
+?  4. Bugs                              OK?
 */
 
 //#region ---> Variáveis
@@ -76,7 +77,6 @@ document.addEventListener('keydown', (evento) => { // atualizaJogo();
 });
 
 
-
 //#region ---> Funções
 function configuracaoDaLinha(espessuraDaLinha) { // Configuração da linha | Melhorando visibilidade
     canvas.lineWidth = espessuraDaLinha; // Espessura(densidade, grossura) da linha
@@ -111,7 +111,7 @@ function escreverLetraCorreta(letraCorreta) {
     canvas.font = 'bold 52px Inter'; // Tipo da fonte usada (importada no HTML)
     configuracaoDaLinha(6); // Configuração da linha
 
-    var localizacao = 600/palavraSecreta.length; // Espaço onde será desenhado o tracinho
+    var localizacao = 600/palavraSecreta.length; //  Espaço onde será desenhado o tracinho
     canvas.fillText(palavraSecreta[letraCorreta], 505 + (localizacao * letraCorreta), 620); // Desenha a letra correta acima dos tracinhos
     canvas.stroke(); // Borda
 }
@@ -155,6 +155,7 @@ function forcaDesenha() { // Toda a base da forca está aqui
 function gameWin() { // Melhorando visibilidade
     if (letrasCorretas.length === palavraSecreta.length) {
         alert('Parabéns! Você ganhou!');
+        vidas = 0;
     }
 }
 
