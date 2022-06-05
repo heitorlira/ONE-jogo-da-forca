@@ -4,6 +4,7 @@
 !  2. feedback visual                   ?
    3. validação: ganhou? <=> perdeu?    OK
 ?  4. Bugs                              OK?
+TODO: 5. melhorar o código utilizando Switch Case dentro de uma função para desenhar o corpo da forca!
 */
 
 //#region ---> Variáveis
@@ -21,7 +22,7 @@ var canvas = document.querySelector('#canvas').getContext('2d'); // -> tabuleiro
 console.log(palavraSecreta);
 
 desenhaTracoLetras(palavraSecreta); // Desenha o tracinho na tela(canvas)
-forcaDesenha();
+forcaDesenha(); // Suporte da forca
 
 document.addEventListener('keydown', (evento) => { // atualizaJogo();
     var codigoLetra = evento.keyCode; // evento.keyCode -> pega o código da tecla pressionada
@@ -138,17 +139,17 @@ function forcaDesenha() { // Toda a base da forca está aqui
     configuracaoDaLinha(5); // Configuração da linha
 
     canvas.beginPath(); // Inicia o desenho
-    canvas.moveTo(550, 450); // Base (baixo): inicio
-    canvas.lineTo(650, 450); // Base (baixo): Final
+    canvas.moveTo(500, 400); // Base (baixo): inicio
+    canvas.lineTo(600, 400); // Base (baixo): Final
 
-    canvas.moveTo(600, 450); // 'Poste': Inicio
-    canvas.lineTo(600, 100); // 'Poste': Final
+    canvas.moveTo(550, 400); // 'Poste': Inicio
+    canvas.lineTo(550, 100); // 'Poste': Final
 
-    canvas.moveTo(600, 100); // Base (cima): Inicio
-    canvas.lineTo(700, 100); // Base (cima): Final
+    canvas.moveTo(550, 100); // Base (cima): Inicio
+    canvas.lineTo(650, 100); // Base (cima): Final
 
-    canvas.moveTo(700, 100); // Suporte cabeça: Inicio
-    canvas.lineTo(700, 150); // Suporte cabeça: Final
+    canvas.moveTo(650, 100); // Suporte cabeça: Inicio
+    canvas.lineTo(650, 150); // Suporte cabeça: Final
     canvas.stroke(); // Borda
 }
 
@@ -168,42 +169,42 @@ function gameOver() {  // Melhorando visibilidade
 // Funções para desenhar o corpo na forca
 function forcaCabeca() {
     canvas.beginPath();
-    canvas.arc(700, 180, 30, 0, 2 * Math.PI);
+    canvas.arc(650, 180, 30, 0, 2 * Math.PI);
     canvas.stroke();
 }
 
 function forcaCorpo() {
     canvas.beginPath();
-    canvas.moveTo(700, 210);
-    canvas.lineTo(700, 300);
+    canvas.moveTo(650, 210);
+    canvas.lineTo(650, 300);
     canvas.stroke();
 }
 
 function forcaBracoEsquerdo() {
     canvas.beginPath();
-    canvas.moveTo(700, 240);
-    canvas.lineTo(660, 270);
+    canvas.moveTo(650, 240);
+    canvas.lineTo(610, 270);
     canvas.stroke();
 }
 
 function forcaBracoDireito() {
     canvas.beginPath();
-    canvas.moveTo(700, 240);
-    canvas.lineTo(740, 270);
+    canvas.moveTo(650, 240);
+    canvas.lineTo(690, 270);
     canvas.stroke();
 }
 
 function forcaPernaEsquerda() {
     canvas.beginPath();
-    canvas.moveTo(700, 300);
-    canvas.lineTo(660, 350);
+    canvas.moveTo(650, 300);
+    canvas.lineTo(610, 350);
     canvas.stroke();
 }
 
 function forcaPernaDireita() {
     canvas.beginPath();
-    canvas.moveTo(700, 300);
-    canvas.lineTo(740, 350);
+    canvas.moveTo(650, 300);
+    canvas.lineTo(690, 350);
     canvas.stroke();
 }
 
