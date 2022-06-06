@@ -4,7 +4,6 @@
 !  2. feedback visual                   ?
    3. validação: ganhou? <=> perdeu?    OK
 ?  4. Bugs                              OK?
-TODO: 5. melhorar o código utilizando Switch Case dentro de uma função para desenhar o corpo da forca!
 */
 
 //#region ---> Variáveis

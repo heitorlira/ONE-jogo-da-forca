@@ -1,5 +1,7 @@
 * {
     font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 img {
@@ -16,4 +18,52 @@ body {
 
 .div-canvas {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-jogo-reiniciar {
+    width: 200px;
+    height: 50px;
+    padding: 10px;    
+
+    margin-right: 100px;
+
+    background: #0A3871;
+    border-radius: 24px;
+
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+
+    opacity: 1;
+
+}
+
+.btn-jogo-reiniciar:hover {
+    opacity: 0.6;
+    transition: 0.6s;
+}
+
+.btn-jogo-voltar-menu {
+    width: 200px;
+    height: 50px;
+    padding: 10px;    
+
+    background: #F3F5FC;
+    border-radius: 24px;
+
+    font-size: 16px;
+    text-align: center;
+    color: #0A3871;
+
+    opacity: 0.7;
+}
+
+.btn-jogo-voltar-menu:hover {
+    background: #e4ebf3;
+    color: #000000;
+    opacity: 1;
+    transition: 0.6s;
 }
