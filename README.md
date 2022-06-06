@@ -3,7 +3,7 @@
 
 Jogo da Forca utilizando *HTML, CSS e JavaScript* com foco em Canvas.
 
-Este desafio foi oferecido pelo programa **ONE** e **Alura**!
+Este desafio foi oferecido pelo programa **Oracle ONE** e **Alura**!
 
 ## Requisitos:
 
