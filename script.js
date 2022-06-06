@@ -7,7 +7,9 @@
 */
 
 //#region ---> Variáveis
-var palavras = ['ALURA', 'ORACLE', 'HTML', 'CSS', 'JAVASCRIPT']; // Array de palavras a serem sorteadas #TODO: adicionar mais
+var palavras = [
+    'ALURA', 'ORACLE', 'HTML', 'CSS', 'MACA', 'BANANA', 'MELANCIA', 'ABACATE', 'UVA', 'PERA', 'LARANJA', 'MELAO', 'MORANGO', 'ABACAXI', 'CACHORRO', 'GATO', 'PEIXE', 'SAPO', 'PATO', 'CAMA', 'ROUPA', 'LIVRO', 'URSO', 'PINGUIM', 'BATMAN', 'CORINGA', 'COMIDA', 'PRATO', 'COLHER', 'AGUA', 'SUCO', 'CHUVA'
+]; // Array de palavras a serem sorteadas #TODO: adicionar mais
 palavras.push(sessionStorage.getItem('palavraStorage')); // Adiciona a palavra do storage na array de palavras antes de sortear uma palavra
 var palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)]; // Sorteia uma palavra e arredonda
 
