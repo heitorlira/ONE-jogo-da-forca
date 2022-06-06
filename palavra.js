@@ -6,11 +6,13 @@ var btnSalvarPalavra = document.querySelector('.btn-nova-palavra');
 sessionStorage.setItem('palavraStorage', 'PALAVRA'); // Evita que a palavra seja 'null'
 //#endregion ---> Variáveis
 
-btnIniciarJogo.onclick = () => {
-    window.location.href = 'https://heitorlira.github.io/forca.html'; // Redireciona para a página do jogo
-}
+// btnIniciarJogo.addEventListener('click', iniciaJogoForca); // Redireciona para a página do jogo
 
 //#region ---> Funções
+function iniciaJogoForca() {
+    window.location.href = '/forca.html'; // Redireciona para a página do jogo
+}
+
 btnMostrarDiv.onclick = () => {
     divOculta.style.display = 'block';
     btnMostrarDiv.innerHTML = 'Digite sua palavra abaixo';

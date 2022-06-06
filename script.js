@@ -15,6 +15,7 @@ var btnVoltarMenu = document.querySelector('.btn-jogo-voltar-menu');
 
 desenhaTracoLetras(palavraSecreta); // Desenha o tracinho na tela(canvas)
 forcaDesenha(); // Suporte da forca
+// btnVoltarMenu.addEventListener('click', voltarMenu); // Voltar para o menu
 
 // Ao pressionar uma tecla --> atualizaJogo();
 document.addEventListener('keydown', (evento) => {
@@ -50,11 +51,6 @@ document.addEventListener('keydown', (evento) => {
     console.log('Vidas      -> ' + vidas);
     */
 });
-
-btnVoltarMenu.onclick = () => {
-    window.location.href = 'https://heitorlira.github.io/ONE-jogo-da-forca/'; // Redireciona para o menu
-}
-
 
 //#region ---> Funções
 function configuracaoDaLinha(espessuraDaLinha) { // Configuração da linha | Melhorando visibilidade
@@ -217,5 +213,9 @@ function forcaPernaDireita() {
     canvas.moveTo(650, 300);
     canvas.lineTo(690, 350);
     canvas.stroke();
+}
+
+function voltarMenu() {
+    window.location.href = 'https://heitorlira.github.io/ONE-jogo-da-forca/';
 }
 //#endregion ---> Funções
