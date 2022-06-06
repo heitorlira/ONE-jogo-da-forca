@@ -27,10 +27,12 @@ Preciso dizer que se acostumar com o **CANVAS** foi deveras dificil. Já fiz alg
 
 O maior desafio enfrentado foi posicionar os elementos para que eu pudesse trabalhar inicialmente e, a partir disso, refinar até o fim do projeto.
 
+> Preciso dizer que me sinto feliz pois consegui notar a evolução do primeiro projeto para esse. (´∀｀)♡
+
 #
 # Feedback
 
-Se você tiver algum feedback, por favor nos deixe saber por meio de minhas redes sociais.
+Se você tiver algum feedback, por favor nos deixe saber por meio das minhas redes sociais.
 
 > ps: Caso você não encontre minhas redes *aqui* ou em minha *página inicial*, provavelmente esqueci de colocar o link. Então, dentro do projeto você pode encontrar o link para três de minhas redes: *GitHub*, *LinkedIn* e *Discord*.
 > 
