@@ -17,9 +17,16 @@
 
 
     <div class="div-menu-botoes">
-       <button class="btn-iniciar-jogo" type="button" onclick="location.href = '/forca.html'">Iniciar Jogo</button>
-        <button class="btn-add-palavra" type="button">Adicionar nova palavra</button>
+        <button class="btn-iniciar-jogo" type="button" onclick="location.href = '/forca.html'">Iniciar Jogo</button>
+        <button class="btn-mostrar-div" type="button">Adicionar nova palavra</button>
+
+        <div class="div-add-nova-palavra">
+            <input type="text" class="nova-palavra" maxlength="8" placeholder="Digite sua nova palavra">
+            <button class="btn-nova-palavra">Salvar</button>
+        </div>
     </div>
+
+    
     
 
 
@@ -27,5 +34,6 @@
 
     <!--Scripts-->
     <script src="script.js"></script>
+    <script src="palavra.js"></script>
 </body>
 </html>

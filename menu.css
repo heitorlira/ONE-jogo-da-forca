@@ -4,6 +4,10 @@
     font-weight: 400;
 }
 
+body {
+    background-color: #F3F5FC;
+}
+
 img {
     position: absolute;
     width: auto;
@@ -20,6 +24,66 @@ img {
     top: 40%;
 
     flex-direction: column;
+}
+
+.btn-iniciar-jogo {
+    width: 250px;
+    height: 60px;
     
-    
+    padding: 10px;    
+    margin-bottom: 15px;
+
+    background: #0A3871;
+    border-radius: 24px;
+    border-width: thin;
+
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+
+    opacity: 1;
+}
+
+.btn-iniciar-jogo:hover {
+    opacity: 0.6;
+    transition: 0.6s;
+}
+
+.btn-mostrar-div {
+    width: 250px;
+    height: 60px;
+    padding: 10px;    
+
+    background: #F3F5FC;
+    border-radius: 24px;
+
+    font-size: 16px;
+    text-align: center;
+    color: #0A3871;
+
+    border-color: #0A3871;
+    border-width: thin;
+}
+
+.div-add-nova-palavra {
+    display: none; /* hide */
+
+    margin-top: 25px;
+}
+
+.btn-nova-palavra {
+    background: #0A3871;
+    border-radius: 2px;
+    border-width: thin;
+
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+
+    opacity: 1;
+}
+
+.btn-nova-palavra:hover {
+    opacity: 0.6;
+    transition: 0.6s;
 }

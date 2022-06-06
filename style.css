@@ -32,6 +32,7 @@ body {
 
     background: #0A3871;
     border-radius: 24px;
+    border-width: thin;
 
     font-size: 16px;
     text-align: center;
@@ -53,6 +54,7 @@ body {
 
     background: #F3F5FC;
     border-radius: 24px;
+    border-width: thin;
 
     font-size: 16px;
     text-align: center;
