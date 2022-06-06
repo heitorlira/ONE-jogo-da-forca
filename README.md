@@ -5,6 +5,8 @@ Jogo da Forca utilizando *HTML, CSS e JavaScript* com foco em Canvas.
 
 Este desafio foi oferecido pelo programa **Oracle ONE** e **Alura**!
 
+![Badge de conclusão de projeto](/assets/badge-jogoDaForca.png)
+
 ## Requisitos:
 
 - Deve funcionar só com letras maiúsculas;
