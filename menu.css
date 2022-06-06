@@ -1,0 +1,25 @@
+* {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+img {
+    position: absolute;
+    width: auto;
+    height: 35px;
+    left: 40px;
+    top: 30px;
+}
+
+.div-menu-botoes {
+    display: flex;
+    position: absolute;
+
+    left: 40%;
+    top: 40%;
+
+    flex-direction: column;
+    
+    
+}

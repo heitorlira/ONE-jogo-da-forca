@@ -5,30 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Jogo da Forca</title>
+    <title>Menu - Jogo da Forca</title>
     <!--Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <!--CSS-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
 
 </head>
 <body>
     <img src="assets/logo-alura.png" alt="logo da Alura">
 
-    <div class="div-canvas">
-        <canvas id="canvas" width="1200" height="700" style="border:1px solid red;"></canvas>
 
-        <div class="div-botoes-controle">
-            <button class="btn-jogo-reiniciar" onclick="location.reload(true)">Reiniciar</button>
-            <button class="btn-jogo-voltar-menu">Voltar ao Menu</button>
-        </div>
+    <div class="div-menu-botoes">
+       <button class="btn-iniciar-jogo" type="button" onclick="location.href = '/forca.html'">Iniciar Jogo</button>
+        <button class="btn-add-palavra" type="button">Adicionar nova palavra</button>
     </div>
+    
 
-    
-    
-    
-    
-    
+
+
 
     <!--Scripts-->
     <script src="script.js"></script>
