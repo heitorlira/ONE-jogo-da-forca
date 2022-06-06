@@ -10,13 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <!--CSS-->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="menu.css">
+    <!--    <link rel="stylesheet" href="menu.css"> -->
+    <link rel="stylesheet" href="reset.css">
 
 </head>
 <body>
-    <img class="img-logo-alura" src="assets/logo-alura.png" alt="logo da Alura">
+    <a href="https://www.alura.com.br/"><img class="img-logo-alura" src="assets/logo-alura.png" title="Site Alura" alt="logo da Alura"></a>
 
     <div class="div-canvas">
+                                                            <!--TODO: APAGA A BORDA-->
         <canvas id="canvas" width="1200" height="700" style="border:1px solid red;"></canvas>
 
         <div class="div-botoes-controle">
@@ -24,6 +26,17 @@
             <button class="btn-jogo-voltar-menu" type="button" onclick="location.href='/index.html'">Voltar ao Menu</button>
         </div>
     </div>
+
+    <footer class="footer-forca">
+        <p class="creditos">
+            Desenvolvido por <strong>Heitor Lira</strong> - 2022
+        </p>
+        <p class="redes">
+            <a href="https://github.com/heitorlira"><img class="redes-img" src="assets/GitHub-Mark-Light-64px.png" title="GitHub - Heitor Lira" alt="Icone GitHub"> </a>
+            <a href="https://www.linkedin.com/in/heitor-lira/"><img src="assets/linkedin.png" class="redes-img" title="LinkedIn - Heitor Lira" alt="Icone LinkedIn"> </a>
+            <a href="https://discord.com/users/203206048020955136"> <img class="redes-img" src="assets/Discord-Logo-White.png" title="Discord - Heitor Lira" alt="Discord perfil - Heitor Lira"></a>
+        </p>
+    </footer>
 
     <!--Scripts-->
     <script src="script.js"></script>

@@ -83,6 +83,10 @@ body {
     margin-top: 25px;
 }
 
+.nova-palavra {
+    background: #F3F5FC;
+}
+
 .btn-nova-palavra {
     background: #0A3871;
     border-radius: 2px;
@@ -93,6 +97,7 @@ body {
     color: #FFFFFF;
 
     opacity: 1;
+    cursor: pointer;
 }
 
 .btn-nova-palavra:hover {
@@ -100,7 +105,7 @@ body {
     transition: 0.6s;
 }
 
-footer {
+.footer-index {
     position: fixed;
     height: 95px;
     background-color: #0A3871;
@@ -132,4 +137,11 @@ footer {
     text-align: center;
     height: 32px;
     margin: 0 10px;
+
+    opacity: 1;
+}
+
+.redes-img:hover {
+    transition: 0.6s;
+    opacity: 0.6;    
 }
