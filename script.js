@@ -139,14 +139,23 @@ function forcaDesenha() { // Toda a base da forca está aqui
 
 function gameWin() { // Melhorando visibilidade
     if (letrasCorretas.length === palavraSecreta.length) {
-        alert('Parabéns! Você ganhou!');
+        canvas.font = 'bold 52px Inter'; // Tipo da fonte usada (importada no HTML)
+        configuracaoDaLinha(6); // Configuração da linha
+        canvas.fillStyle = '#5CFF5C'; // Cor da letra
+        canvas.fillText('Você venceu!', 750, 300); // Desenha a letra correta acima dos tracinhos
+        canvas.stroke(); // Borda
+
         vidas = 0;
     }
 }
 
 function gameOver() {  // Melhorando visibilidade
     if (vidas == 0) {
-        alert('Game Over!'); // Perdeu o jogo
+        canvas.font = 'bold 52px Inter'; // Tipo da fonte usada (importada no HTML)
+        configuracaoDaLinha(6); // Configuração da linha
+        canvas.fillStyle = '#FF5C5C'; // Cor da letra
+        canvas.fillText('Você perdeu!', 750, 300); // Desenha a letra correta acima dos tracinhos
+        canvas.stroke(); // Borda
     }
 }
 
@@ -215,5 +224,4 @@ function forcaPernaDireita() {
     canvas.lineTo(690, 350);
     canvas.stroke();
 }
-
 //#endregion ---> Funções
