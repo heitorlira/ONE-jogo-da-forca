@@ -1,11 +1,3 @@
-/* TODO:
-   1. lógica                            OK
-   1.1 Desenhando a forca               OK
-!  2. feedback visual                   ?
-   3. validação: ganhou? <=> perdeu?    OK
-?  4. Bugs                              OK?
-*/
-
 //#region ---> Variáveis
 var palavras = [
     'ALURA', 'ORACLE', 'HTML', 'CSS', 'MACA', 'BANANA', 'MELANCIA', 'ABACATE', 'UVA', 'PERA', 'LARANJA', 'MELAO', 'MORANGO', 'ABACAXI', 'CACHORRO', 'GATO', 'PEIXE', 'SAPO', 'PATO', 'CAMA', 'ROUPA', 'LIVRO', 'URSO', 'PINGUIM', 'BATMAN', 'CORINGA', 'COMIDA', 'PRATO', 'COLHER', 'AGUA', 'SUCO', 'CHUVA'
@@ -20,18 +12,11 @@ var letrasCorretas = []; // -> faz parte da palavra secreta
 var canvas = document.querySelector('#canvas').getContext('2d'); // -> tabuleiro do jogo | Onde será desenhado
 //#endregion ---> Variáveis
 
-// TODO: Apagar LOG
-console.log(palavraSecreta);
-console.log(sessionStorage.getItem('palavraStorage'));
-//! Essa abaixo tá quase
-
-console.log(palavras);
-//TODO: APAGAR
-
 desenhaTracoLetras(palavraSecreta); // Desenha o tracinho na tela(canvas)
 forcaDesenha(); // Suporte da forca
 
-document.addEventListener('keydown', (evento) => { // atualizaJogo();
+// Ao pressionar uma tecla --> atualizaJogo();
+document.addEventListener('keydown', (evento) => {
     var codigoLetra = evento.keyCode; // evento.keyCode -> pega o código da tecla pressionada
 
     if (!vidas == 0) {
@@ -56,11 +41,13 @@ document.addEventListener('keydown', (evento) => { // atualizaJogo();
         }
     } // Fim
 
-    // TODO: Apagar LOGs
+    /*
+    // DEBUG
     console.log('Letra inserida: ' + letra);
     console.log('Erradas    -> ' + letrasErradas);
     console.log('Corretas   -> ' + letrasCorretas);
     console.log('Vidas      -> ' + vidas);
+    */
 });
 
 
