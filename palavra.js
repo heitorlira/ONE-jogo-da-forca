@@ -1,6 +1,12 @@
 var btnMostrarDiv = document.querySelector('.btn-mostrar-div');
 var divOculta = document.querySelector('.div-add-nova-palavra');
 var btnSalvarPalavra = document.querySelector('.btn-nova-palavra');
+sessionStorage.setItem('palavraStorage', 'PALAVRA');
+
+// TODO: LOGS
+console.log(palavras);
+console.log(sessionStorage.getItem('palavraStorage'));
+
 
 btnMostrarDiv.onclick = () => {
     divOculta.style.display = 'block';
