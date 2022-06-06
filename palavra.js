@@ -10,7 +10,7 @@ sessionStorage.setItem('palavraStorage', 'PALAVRA'); // Evita que a palavra seja
 
 //#region ---> Funções
 function iniciaJogoForca() {
-    window.location.href = 'https://heitorlira.github.io/forca.html'; // Redireciona para a página do jogo
+    window.location.href = '../ONE-jogo-da-forca/forca.html'; // Redireciona para a página do jogo
 }
 
 btnMostrarDiv.onclick = () => {
