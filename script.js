@@ -10,6 +10,7 @@ var letrasErradas = []; // -> Array de letras erradas & não podem ser repetidas
 var letrasCorretas = []; // -> faz parte da palavra secreta
 
 var canvas = document.querySelector('#canvas').getContext('2d'); // -> tabuleiro do jogo | Onde será desenhado
+var btnVoltarMenu = document.querySelector('.btn-jogo-voltar-menu');
 //#endregion ---> Variáveis
 
 desenhaTracoLetras(palavraSecreta); // Desenha o tracinho na tela(canvas)
@@ -49,6 +50,10 @@ document.addEventListener('keydown', (evento) => {
     console.log('Vidas      -> ' + vidas);
     */
 });
+
+btnVoltarMenu.onclick = () => {
+    window.location.href = 'https://heitorlira.github.io/ONE-jogo-da-forca/'; // Redireciona para o menu
+}
 
 
 //#region ---> Funções
