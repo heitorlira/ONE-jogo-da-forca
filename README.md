@@ -41,7 +41,7 @@ Se você tiver algum feedback, por favor nos deixe saber por meio de minhas rede
 
 **Como eu iniciei o projeto?**
 
-Primeiramente, olá! ヽ(´▽`)/
+> Primeiramente, olá! ヽ(´▽`)/
 
 Sendo sincero, sempre prefiro iniciar desenhando (ou 'programando') em papel.
 
