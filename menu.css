@@ -18,7 +18,7 @@ img {
 
 .div-menu-botoes {
     display: flex;
-    position: absolute;
+    position: fixed;
 
     left: 40%;
     top: 40%;
@@ -47,6 +47,7 @@ img {
 .btn-iniciar-jogo:hover {
     opacity: 0.6;
     transition: 0.6s;
+    cursor: pointer;
 }
 
 .btn-mostrar-div {
@@ -63,11 +64,22 @@ img {
 
     border-color: #0A3871;
     border-width: thin;
+
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.btn-mostrar-div:hover {
+    background: #e4ebf3;
+    color: #000;
+    opacity: 1;
+    transition: 0.6s;
+    cursor: pointer;
+
 }
 
 .div-add-nova-palavra {
     display: none; /* hide */
-
     margin-top: 25px;
 }
 
@@ -86,4 +98,25 @@ img {
 .btn-nova-palavra:hover {
     opacity: 0.6;
     transition: 0.6s;
+}
+
+footer {
+    position: fixed;
+    height: 50px;
+    background-color: #0A3871;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+.creditos {
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+}
+
+.creditos strong {
+    font-weight: 600;
 }

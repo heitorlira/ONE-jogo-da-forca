@@ -39,12 +39,12 @@ body {
     color: #FFFFFF;
 
     opacity: 1;
-
 }
 
 .btn-jogo-reiniciar:hover {
     opacity: 0.6;
     transition: 0.6s;
+    cursor: pointer;
 }
 
 .btn-jogo-voltar-menu {
@@ -68,4 +68,5 @@ body {
     color: #000000;
     opacity: 1;
     transition: 0.6s;
+    cursor: pointer;
 }
