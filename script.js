@@ -8,6 +8,7 @@
 
 //#region ---> Variáveis
 var palavras = ['ALURA', 'ORACLE', 'HTML', 'CSS', 'JAVASCRIPT']; // Array de palavras a serem sorteadas #TODO: adicionar mais
+palavras.push(sessionStorage.getItem('palavraStorage')); // Adiciona a palavra do storage na array de palavras antes de sortear uma palavra
 var palavraSecreta = palavras[Math.floor(Math.random() * palavras.length)]; // Sorteia uma palavra e arredonda
 
 var vidas = 6; // Quantidade de vidas restantes antes de perder o jogo | Validação de teclas pressionadas
@@ -19,6 +20,11 @@ var canvas = document.querySelector('#canvas').getContext('2d'); // -> tabuleiro
 
 // TODO: Apagar LOG
 console.log(palavraSecreta);
+console.log(sessionStorage.getItem('palavraStorage'));
+//! Essa abaixo tá quase
+
+console.log(palavras);
+//TODO: APAGAR
 
 desenhaTracoLetras(palavraSecreta); // Desenha o tracinho na tela(canvas)
 forcaDesenha(); // Suporte da forca

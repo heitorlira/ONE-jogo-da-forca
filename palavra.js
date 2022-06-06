@@ -4,13 +4,14 @@ var btnSalvarPalavra = document.querySelector('.btn-nova-palavra');
 
 btnMostrarDiv.onclick = () => {
     divOculta.style.display = 'block';
-    btnMostrarDiv.innerHTML = 'Ocultar';
+    btnMostrarDiv.innerHTML = 'Digite sua palavra abaixo';
 }
 
 btnSalvarPalavra.onclick = () => {
-    var novaPalavra = document.querySelector('.nova-palavra').value; // Pega o valor do input
-    palavras.push(novaPalavra.toUpperCase()); // Adiciona a palavra nova na array palavras
-    novaPalavra.value = 'Salvo!'; // Limpa o input
+    var novaPalavra = document.querySelector('.nova-palavra').value.toUpperCase(); // Pega o valor do input
+    sessionStorage.setItem('palavraStorage', novaPalavra); // Salva o valor do input no sessionStorage
+    //! Apagar linhas abaixo
     // TODO: Apagar LOG
+    palavras.push(novaPalavra.toUpperCase()); // Adiciona a palavra nova na array palavras
     console.log(palavras);
 }
