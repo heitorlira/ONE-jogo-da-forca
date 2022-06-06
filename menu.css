@@ -8,7 +8,7 @@ body {
     background-color: #F3F5FC;
 }
 
-img {
+.img-logo-alura {
     position: absolute;
     width: auto;
     height: 35px;
@@ -102,7 +102,7 @@ img {
 
 footer {
     position: fixed;
-    height: 50px;
+    height: 95px;
     background-color: #0A3871;
     bottom: 0px;
     left: 0px;
@@ -119,4 +119,17 @@ footer {
 
 .creditos strong {
     font-weight: 600;
+}
+
+.redes {
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+}
+
+.redes-img {
+    text-align: center;
+    height: 32px;
+    margin: 0 10px;
 }
